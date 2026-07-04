@@ -1,0 +1,76 @@
+.skill-summary {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.summary-section {
+  margin-bottom: 20px;
+}
+
+.summary-section:last-child {
+  margin-bottom: 0;
+}
+
+.summary-section h3 {
+  color: #667eea;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.summary-skill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  background: white;
+  border-radius: 6px;
+}
+
+.skill-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.translations {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.competencies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.competency {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.competency-name {
+  color: #333;
+  font-weight: 500;
+}
+
+.competency-count {
+  color: #999;
+  font-size: 0.9em;
+}

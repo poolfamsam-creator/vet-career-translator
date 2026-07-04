@@ -1,0 +1,461 @@
+{
+  "careers": [
+    {
+      "id": "project_manager",
+      "title": "Project Manager",
+      "description": "Oversees projects from conception to completion",
+      "required_skills": ["leadership", "team management", "planning", "communication"],
+      "salary_range": "$60,000 - $120,000",
+      "growth_potential": "High",
+      "industries": ["Technology", "Construction", "Finance"],
+      "interests": ["leadership", "organization", "problem-solving", "business", "finance", "strategy", "team collaboration", "project management"],
+      "certifications": ["PMP (Project Management Professional)", "Agile/Scrum Certification", "CAPM (Certified Associate Project Manager)"],
+      "getting_started": ["Gain 3-5 years of experience in related roles", "Pursue PMP certification (requires 4,500 hours PM experience)", "Learn project management tools like Asana or MS Project", "Take leadership development courses", "Network with PMI (Project Management Institute)"],
+      "marketing_tips": ["Emphasize your proven leadership and strategic planning from military command roles", "Highlight successful large-scale operations management and coordination", "Showcase your ability to work under pressure and meet strict deadlines", "Demonstrate cost management and resource optimization experience"],
+      "veteran_friendly_companies": [
+        {"name": "Microsoft", "description": "Strong military recruitment programs with veteran mentorship"},
+        {"name": "Google", "description": "Offers veterans career development and specialized programs"},
+        {"name": "JPMorgan Chase", "description": "Major defense contract work with veteran advancement opportunities"},
+        {"name": "UPS", "description": "Extensive logistics and operations with military hiring focus"},
+        {"name": "FedEx", "description": "Leadership development programs designed for military backgrounds"}
+      ]
+    },
+    {
+      "id": "it_support",
+      "title": "IT Support Specialist",
+      "description": "Provides technical support to end users",
+      "required_skills": ["technical support", "troubleshooting", "communication"],
+      "salary_range": "$45,000 - $75,000",
+      "growth_potential": "Medium",
+      "industries": ["Technology", "Healthcare", "Finance"],
+      "interests": ["technology", "problem-solving", "helping others", "customer service", "security", "continuous learning", "systems administration"],
+      "certifications": ["CompTIA A+", "Microsoft Certified: Modern Desktop Administrator", "Cisco Certified Entry Networking Technician"],
+      "getting_started": ["Obtain CompTIA A+ certification (entry-level)", "Gain hands-on IT support experience through help desk roles", "Learn common ticketing systems", "Develop customer service skills", "Stay current with OS and software updates"],
+      "marketing_tips": ["Translate your technical troubleshooting skills from equipment maintenance", "Emphasize customer service and communication abilities", "Highlight your ability to work under pressure and solve problems efficiently", "Showcase your dedication to training others and knowledge transfer"],
+      "veteran_friendly_companies": [
+        {"name": "Dell Technologies", "description": "Dedicated veteran hiring and support programs"},
+        {"name": "Booz Allen Hamilton", "description": "Major defense IT contractor with veteran advancement paths"},
+        {"name": "Google", "description": "Google.com/careers has specific veteran entry-level programs"},
+        {"name": "Microsoft", "description": "Military hiring pipeline with IT certification sponsorship"}
+      ]
+    },
+    {
+      "id": "systems_admin",
+      "title": "Systems Administrator",
+      "description": "Manages computer systems and networks",
+      "required_skills": ["system administration", "networking", "security"],
+      "salary_range": "$65,000 - $110,000",
+      "growth_potential": "High",
+      "industries": ["Technology", "Finance", "Healthcare"],
+      "interests": ["technology", "organization", "problem-solving", "business", "security", "innovation", "infrastructure", "operations"],
+      "certifications": ["CompTIA Network+", "Microsoft Certified: Azure Administrator", "Cisco Certified Network Associate (CCNA)"],
+      "getting_started": ["Get CompTIA Network+ certification", "Gain 2-3 years IT support experience", "Learn Linux and Windows administration", "Study networking fundamentals", "Pursue vendor certifications (Microsoft, Cisco)"],
+      "marketing_tips": ["Emphasize your military infrastructure management and system optimization experience", "Highlight your ability to maintain uptime and security protocols", "Showcase your quick problem resolution skills under high-pressure situations", "Demonstrate your commitment to continuous learning and compliance"],
+      "veteran_friendly_companies": [
+        {"name": "CrowdStrike", "description": "Cybersecurity with strong veteran hiring for IT roles"},
+        {"name": "Booz Allen Hamilton", "description": "Top defense contractor with extensive systems administration work"},
+        {"name": "JPMorgan Chase", "description": "Major IT infrastructure employer with veteran programs"},
+        {"name": "Google Cloud", "description": "Cloud administration roles with military-background hiring focus"}
+      ]
+    },
+    {
+      "id": "data_analyst",
+      "title": "Data Analyst",
+      "description": "Analyzes data to support business decisions",
+      "required_skills": ["data analysis", "research", "critical thinking", "statistics"],
+      "salary_range": "$55,000 - $95,000",
+      "growth_potential": "High",
+      "industries": ["Technology", "Finance", "Healthcare"],
+      "interests": ["analysis", "technology", "problem-solving", "finance", "business", "data-driven", "research", "decision making"],
+      "certifications": ["Google Data Analytics Certificate", "Microsoft Certified: Data Analyst", "Tableau Desktop Specialist"],
+      "getting_started": ["Learn Excel advanced functions and pivot tables", "Take SQL programming course", "Study statistical analysis and data visualization", "Complete Google or Coursera data analytics programs", "Build portfolio with sample projects"],
+      "marketing_tips": ["Emphasize your intelligence analysis experience translating to business insights", "Highlight your ability to identify patterns and trends from complex data", "Showcase your attention to detail and accuracy requirements", "Demonstrate how you communicated findings to leadership effectively"],
+      "veteran_friendly_companies": [
+        {"name": "Google", "description": "Major hiring for data roles with analytics certification programs"},
+        {"name": "JPMorgan Chase", "description": "Large financial data analytics teams hiring veterans"},
+        {"name": "Microsoft", "description": "Data analytics division with dedicated veteran recruitment"},
+        {"name": "Deloitte", "description": "Consulting firm with veteran-to-analyst programs"}
+      ]
+    },
+    {
+      "id": "financial_analyst",
+      "title": "Financial Analyst",
+      "description": "Analyzes financial data to support business decisions",
+      "required_skills": ["financial analysis", "accounting", "data analysis", "reporting"],
+      "salary_range": "$60,000 - $110,000",
+      "growth_potential": "High",
+      "industries": ["Finance", "Banking", "Insurance"],
+      "interests": ["finance", "analysis", "problem-solving", "business", "strategy", "investing", "economic thinking", "reporting"],
+      "certifications": ["CFA (Chartered Financial Analyst)", "FP&A Certificate", "Financial Modeling Certificate"],
+      "getting_started": ["Develop strong Excel and financial modeling skills", "Learn accounting principles and financial statements", "Complete financial analyst certification courses", "Gain experience with Bloomberg Terminal or similar tools", "Build investment analysis portfolio"],
+      "marketing_tips": ["Translate your budget management and procurement experience to financial analysis", "Emphasize your attention to detail and accuracy in financial reporting", "Highlight your strategic decision-making under tight deadlines", "Showcase your ability to communicate complex financial information clearly"],
+      "veteran_friendly_companies": [
+        {"name": "JPMorgan Chase", "description": "Major banking employer with veteran financial analyst programs"},
+        {"name": "Goldman Sachs", "description": "Strong military hiring for financial roles"},
+        {"name": "Morgan Stanley", "description": "Veteran hiring pipeline for finance positions"},
+        {"name": "Fidelity Investments", "description": "Extensive financial services with military recruitment focus"}
+      ]
+    },
+    {
+      "id": "cybersecurity_analyst",
+      "title": "Cybersecurity Analyst",
+      "description": "Protects computer networks from security threats",
+      "required_skills": ["cybersecurity", "network security", "threat analysis", "compliance"],
+      "salary_range": "$70,000 - $130,000",
+      "growth_potential": "High",
+      "industries": ["Technology", "Finance", "Government"],
+      "interests": ["security", "technology", "problem-solving", "business", "protection", "innovation", "defense", "threat analysis"],
+      "certifications": ["CompTIA Security+", "Certified Ethical Hacker (CEH)", "CISSP (Certified Information Systems Security Professional)"],
+      "getting_started": ["Get CompTIA Security+ certification", "Study network security fundamentals", "Learn Linux and network protocols", "Complete ethical hacking courses", "Pursue advanced cybersecurity certifications"],
+      "marketing_tips": ["Emphasize your military cybersecurity and threat assessment experience", "Highlight your ability to identify and mitigate security vulnerabilities", "Showcase your understanding of defense protocols and compliance requirements", "Demonstrate your commitment to protecting critical systems and data"],
+      "veteran_friendly_companies": [
+        {"name": "CrowdStrike", "description": "Cybersecurity leader with major veteran hiring initiatives"},
+        {"name": "Booz Allen Hamilton", "description": "Defense contractor specializing in cybersecurity"},
+        {"name": "Lockheed Martin", "description": "Major defense contractor with cybersecurity teams"},
+        {"name": "Google Cloud Security", "description": "Cloud security roles with veteran hiring focus"}
+      ]
+    },
+    {
+      "id": "supply_chain",
+      "title": "Supply Chain Manager",
+      "description": "Manages logistics and supply chain operations",
+      "required_skills": ["logistics", "supply chain management", "planning", "vendor management"],
+      "salary_range": "$65,000 - $120,000",
+      "growth_potential": "High",
+      "industries": ["Logistics", "Retail", "Manufacturing"],
+      "interests": ["organization", "problem-solving", "efficiency", "business", "finance", "sustainability", "logistics", "cost management"],
+      "certifications": ["APICS CSCP (Certified Supply Chain Professional)", "APICS CPIM", "Six Sigma Green Belt"],
+      "getting_started": ["Gain 2-3 years logistics or operations experience", "Pursue APICS CSCP or CPIM certification", "Learn ERP systems like SAP or Oracle", "Study lean and Six Sigma methodologies", "Develop vendor relationship management skills"],
+      "marketing_tips": ["Emphasize your military logistics and supply chain coordination expertise", "Highlight your cost optimization and resource management skills", "Showcase your ability to manage complex operations under pressure", "Demonstrate vendor relationship management and negotiation abilities"],
+      "veteran_friendly_companies": [
+        {"name": "UPS", "description": "Massive logistics employer with dedicated veteran programs"},
+        {"name": "FedEx", "description": "Supply chain and logistics with strong military hiring"},
+        {"name": "Amazon", "description": "Operations and supply chain with veteran hiring pipeline"},
+        {"name": "Schneider Electric", "description": "Logistics and supply chain management veteran programs"}
+      ]
+    },
+    {
+      "id": "operations_manager",
+      "title": "Operations Manager",
+      "description": "Oversees daily business operations and efficiency",
+      "required_skills": ["operations management", "planning", "coordination", "leadership"],
+      "salary_range": "$60,000 - $110,000",
+      "growth_potential": "High",
+      "industries": ["Manufacturing", "Retail", "Healthcare"],
+      "interests": ["organization", "problem-solving", "leadership", "business", "efficiency", "strategy", "team collaboration", "operations"],
+      "certifications": ["APICS CPIM", "ASQ Certified Manager of Quality/Organizational Excellence", "Six Sigma Black Belt"],
+      "getting_started": ["Gain 3-5 years supervisory or coordinator experience", "Learn operations management principles and best practices", "Study quality management systems", "Pursue advanced certifications in operations", "Develop strategic planning skills"],
+      "marketing_tips": ["Emphasize your military operations coordination and team leadership experience", "Highlight your efficiency improvements and process optimization achievements", "Showcase your ability to manage multiple priorities simultaneously", "Demonstrate your commitment to quality and continuous improvement"],
+      "veteran_friendly_companies": [
+        {"name": "Amazon", "description": "Operations roles across fulfillment centers with veteran programs"},
+        {"name": "Target", "description": "Retail operations with strong military hiring"},
+        {"name": "Toyota", "description": "Manufacturing operations with veteran advancement paths"},
+        {"name": "UPS", "description": "Operations management with extensive military recruitment"}
+      ]
+    },
+    {
+      "id": "business_analyst",
+      "title": "Business Analyst",
+      "description": "Analyzes business processes and recommends improvements",
+      "required_skills": ["business analysis", "data analysis", "communication", "critical thinking"],
+      "salary_range": "$65,000 - $115,000",
+      "growth_potential": "High",
+      "industries": ["Technology", "Finance", "Consulting"],
+      "interests": ["analysis", "problem-solving", "business", "finance", "leadership", "innovation", "data-driven", "research"],
+      "certifications": ["IIBA CCBA (Certified Business Analysis Professional)", "Agile Business Analysis", "Product Management Certification"],
+      "getting_started": ["Learn business process analysis methodologies", "Study requirements gathering and documentation", "Complete IIBA CCBA certification course", "Gain experience with business analysis tools", "Build case studies of process improvements"],
+      "marketing_tips": ["Translate your military operational analysis and strategic planning to business improvement", "Emphasize your ability to identify inefficiencies and recommend solutions", "Showcase your stakeholder communication and consensus-building skills", "Demonstrate your understanding of both technical and business perspectives"],
+      "veteran_friendly_companies": [
+        {"name": "Deloitte", "description": "Consulting firm with strong veteran hiring for analysis roles"},
+        {"name": "Accenture", "description": "Business consulting with dedicated veteran programs"},
+        {"name": "Google", "description": "Business analyst roles with military hiring focus"},
+        {"name": "JPMorgan Chase", "description": "Financial business analysis with veteran recruitment"}
+      ]
+    },
+    {
+      "id": "procurement",
+      "title": "Procurement Manager",
+      "description": "Manages purchasing and vendor relationships",
+      "required_skills": ["procurement", "negotiation", "contract management", "vendor relations"],
+      "salary_range": "$70,000 - $130,000",
+      "growth_potential": "High",
+      "industries": ["Manufacturing", "Government", "Finance"],
+      "interests": ["negotiation", "business", "finance", "problem-solving", "leadership", "strategy", "vendor relationships", "contracts"],
+      "certifications": ["APICS CSCP", "ISM Certified Procurement Professional (CPP)", "Strategic Sourcing Certification"],
+      "getting_started": ["Gain 3-5 years purchasing or procurement experience", "Study contract law and procurement regulations", "Pursue ISM or equivalent procurement certifications", "Learn vendor management and negotiation tactics", "Develop strategic sourcing skills"],
+      "marketing_tips": ["Emphasize your military procurement and vendor negotiation experience", "Highlight your cost savings and strategic purchasing achievements", "Showcase your contract management and compliance expertise", "Demonstrate your vendor relationship management abilities"],
+      "veteran_friendly_companies": [
+        {"name": "General Dynamics", "description": "Defense contractor with procurement teams hiring veterans"},
+        {"name": "Booz Allen Hamilton", "description": "Government procurement work with military hiring"},
+        {"name": "Lockheed Martin", "description": "Defense procurement with veteran advancement paths"},
+        {"name": "Boeing", "description": "Major procurement operations with military background preference"}
+      ]
+    },
+    {
+      "id": "emt",
+      "title": "Emergency Medical Technician",
+      "description": "Provides emergency medical response and care",
+      "required_skills": ["emergency response", "medical knowledge", "communication", "quick decision making"],
+      "salary_range": "$35,000 - $60,000",
+      "growth_potential": "Medium",
+      "industries": ["Healthcare", "Emergency Services"],
+      "interests": ["helping others", "fast-paced", "healthcare", "emergency response", "community service", "life-saving", "medical"],
+      "certifications": ["EMT-Basic Certification", "EMT-Paramedic Certification", "ACLS (Advanced Cardiac Life Support)"],
+      "getting_started": ["Complete EMT-Basic course (120-150 hours)", "Pass National Registry EMT exam", "Get certified in your state", "Gain field experience with ambulance service", "Consider paramedic certification for advancement"],
+      "marketing_tips": ["Leverage your combat medic experience as direct transfer to civilian EMT role", "Emphasize your emergency response and life-saving skills", "Highlight your ability to work under extreme pressure calmly", "Showcase your compassion and commitment to patient care"],
+      "veteran_friendly_companies": [
+        {"name": "American Medical Response (AMR)", "description": "Largest private ambulance provider hiring veterans"},
+        {"name": "Falck USA", "description": "Emergency medical services with military hiring focus"},
+        {"name": "Liberty Ambulance Service", "description": "Regional EMS with veteran recruitment programs"},
+        {"name": "Fire Departments", "description": "Many FDs hire veterans for EMS and firefighter roles"}
+      ]
+    },
+    {
+      "id": "network_engineer",
+      "title": "Network Engineer",
+      "description": "Designs and maintains computer networks",
+      "required_skills": ["networking", "system design", "technical support", "problem solving"],
+      "salary_range": "$75,000 - $135,000",
+      "growth_potential": "High",
+      "industries": ["Technology", "Telecommunications", "Finance"],
+      "interests": ["technology", "problem-solving", "business", "innovation", "infrastructure", "design", "connectivity"],
+      "certifications": ["Cisco CCNA (Certified Associate Network Engineer)", "CompTIA Network+", "Cisco CCNP"],
+      "getting_started": ["Get CompTIA Network+ certification", "Study for Cisco CCNA exam", "Gain 2-3 years network support experience", "Learn routing and switching fundamentals", "Get hands-on lab experience"],
+      "marketing_tips": ["Emphasize your military communications system infrastructure experience", "Highlight your network security and troubleshooting skills", "Showcase your ability to design reliable systems", "Demonstrate your understanding of mission-critical uptime requirements"],
+      "veteran_friendly_companies": [
+        {"name": "Cisco", "description": "Networking leader with strong veteran hiring"},
+        {"name": "Verizon", "description": "Telecommunications with extensive network engineering roles"},
+        {"name": "AT&T", "description": "Major telecom employer with military hiring programs"},
+        {"name": "Google Cloud", "description": "Cloud networking roles with veteran recruitment"}
+      ]
+    },
+    {
+      "id": "quality_assurance",
+      "title": "Quality Assurance Manager",
+      "description": "Ensures products and services meet quality standards",
+      "required_skills": ["compliance", "attention to detail", "regulations", "documentation"],
+      "salary_range": "$60,000 - $110,000",
+      "growth_potential": "High",
+      "industries": ["Manufacturing", "Software", "Healthcare"],
+      "interests": ["precision", "standards", "improvement", "business", "detail orientation", "process optimization", "manufacturing", "compliance"],
+      "certifications": ["ASQ Certified Quality Manager (CQM)", "ISO 9001 Lead Auditor", "Six Sigma Black Belt"],
+      "getting_started": ["Get ASQ Certified Quality Technician (CQT) initially", "Study ISO 9001 quality management systems", "Gain 3-5 years quality experience", "Pursue advanced quality certifications", "Learn quality tools and methodologies"],
+      "marketing_tips": ["Emphasize your military compliance and inspection background", "Highlight your attention to detail and quality assurance requirements", "Showcase your ability to enforce standards consistently", "Demonstrate your process improvement and documentation expertise"],
+      "veteran_friendly_companies": [
+        {"name": "Boeing", "description": "Major quality assurance employer with military hiring"},
+        {"name": "General Dynamics", "description": "Defense manufacturing with quality teams"},
+        {"name": "Toyota", "description": "Quality manufacturing with military hiring focus"},
+        {"name": "Lockheed Martin", "description": "Defense contractor QA with veteran opportunities"}
+      ]
+    },
+    {
+      "id": "hr_manager",
+      "title": "HR Manager",
+      "description": "Manages human resources and personnel operations",
+      "required_skills": ["HR management", "recruitment", "employee relations", "communication"],
+      "salary_range": "$65,000 - $120,000",
+      "growth_potential": "High",
+      "industries": ["All Industries"],
+      "interests": ["people development", "leadership", "business", "organization", "creativity", "mentoring", "learning", "talent management"],
+      "certifications": ["PHR (Professional in Human Resources)", "CIPHR Certification", "Employee Relations Certificate"],
+      "getting_started": ["Gain 3-5 years HR coordinator or recruiting experience", "Study HR fundamentals and employment law", "Pursue PHR certification (requires specific HR experience)", "Learn HR systems and HRIS platforms", "Develop recruitment and employee relations skills"],
+      "marketing_tips": ["Emphasize your military personnel management and team leadership experience", "Highlight your recruitment and talent acquisition skills", "Showcase your ability to manage diverse teams and cultures", "Demonstrate your understanding of compliance and regulations"],
+      "veteran_friendly_companies": [
+        {"name": "Microsoft", "description": "Tech company with strong military hiring and HR programs"},
+        {"name": "Google", "description": "HR leadership roles with veteran recruitment focus"},
+        {"name": "JPMorgan Chase", "description": "Major employer with extensive HR operations"},
+        {"name": "UPS", "description": "Large HR operation with military advancement paths"}
+      ]
+    },
+    {
+      "id": "maintenance_supervisor",
+      "title": "Maintenance Supervisor",
+      "description": "Oversees maintenance operations and repairs",
+      "required_skills": ["maintenance", "troubleshooting", "leadership", "planning"],
+      "salary_range": "$55,000 - $95,000",
+      "growth_potential": "Medium",
+      "industries": ["Manufacturing", "Facilities", "Utilities"],
+      "interests": ["hands-on", "problem-solving", "leadership", "technical", "maintenance", "safety", "equipment", "troubleshooting"],
+      "certifications": ["CMMS Certification", "Maintenance Management Certification", "Electrical/HVAC License"],
+      "getting_started": ["Gain 5+ years maintenance technician experience", "Complete supervisory training programs", "Learn CMMS (Computerized Maintenance Management Systems)", "Pursue trade certifications", "Develop team leadership skills"],
+      "marketing_tips": ["Emphasize your military equipment maintenance and troubleshooting background", "Highlight your ability to coordinate maintenance teams efficiently", "Showcase your preventive maintenance and planning expertise", "Demonstrate your safety compliance and process improvement focus"],
+      "veteran_friendly_companies": [
+        {"name": "DuPont", "description": "Manufacturing with strong maintenance operations"},
+        {"name": "General Motors", "description": "Automotive manufacturing with military hiring"},
+        {"name": "3M", "description": "Manufacturing with maintenance operations"},
+        {"name": "Johnson & Johnson", "description": "Large facilities with maintenance supervision roles"}
+      ]
+    },
+    {
+      "id": "safety_officer",
+      "title": "Safety Officer",
+      "description": "Ensures workplace safety and compliance",
+      "required_skills": ["safety protocols", "hazard assessment", "compliance", "training"],
+      "salary_range": "$55,000 - $95,000",
+      "growth_potential": "Medium",
+      "industries": ["Manufacturing", "Construction", "Oil & Gas"],
+      "interests": ["safety", "compliance", "problem-solving", "training", "healthcare", "protection", "prevention", "risk management"],
+      "certifications": ["OSHA 30-Hour Card", "Certified Safety Professional (CSP)", "ASP (Associate Safety Professional)"],
+      "getting_started": ["Get OSHA 30-Hour certification", "Study workplace safety regulations", "Gain 2-3 years safety or compliance experience", "Pursue CSP or ASP certification", "Learn hazard assessment and mitigation"],
+      "marketing_tips": ["Emphasize your military safety and compliance expertise", "Highlight your hazard identification and risk mitigation background", "Showcase your training and protocol development skills", "Demonstrate your commitment to accident prevention"],
+      "veteran_friendly_companies": [
+        {"name": "Caterpillar", "description": "Heavy equipment with safety operations"},
+        {"name": "Exxon Mobil", "description": "Oil and gas with strong safety focus"},
+        {"name": "OSHA", "description": "Federal workplace safety agency hiring veterans"},
+        {"name": "Turner Construction", "description": "Construction with safety management roles"}
+      ]
+    },
+    {
+      "id": "production_manager",
+      "title": "Production Manager",
+      "description": "Manages manufacturing production and output",
+      "required_skills": ["production management", "planning", "leadership", "problem-solving"],
+      "salary_range": "$70,000 - $130,000",
+      "growth_potential": "High",
+      "industries": ["Manufacturing", "Pharmaceutical", "Food & Beverage"],
+      "interests": ["leadership", "efficiency", "problem-solving", "business", "process leadership", "optimization", "manufacturing", "operations"],
+      "certifications": ["Lean Six Sigma Green Belt", "APICS CPIM", "ASQ Certified Manager"],
+      "getting_started": ["Gain 5+ years production or operations experience", "Study lean and Six Sigma methodologies", "Complete production management training", "Pursue advanced certifications", "Develop strategic planning skills"],
+      "marketing_tips": ["Translate your military operational command experience to production management", "Emphasize your efficiency optimization and resource management skills", "Highlight your ability to meet deadlines and quotas consistently", "Showcase your team leadership and process improvement expertise"],
+      "veteran_friendly_companies": [
+        {"name": "Toyota", "description": "Manufacturing leader with lean management focus"},
+        {"name": "Boeing", "description": "Aerospace manufacturing with production operations"},
+        {"name": "Ford Motor Company", "description": "Automotive with production management roles"},
+        {"name": "Johnson & Johnson", "description": "Pharmaceutical manufacturing with production teams"}
+      ]
+    },
+    {
+      "id": "equipment_specialist",
+      "title": "Equipment Specialist",
+      "description": "Maintains and repairs specialized equipment",
+      "required_skills": ["mechanical repair", "troubleshooting", "technical knowledge", "maintenance"],
+      "salary_range": "$50,000 - $90,000",
+      "growth_potential": "Medium",
+      "industries": ["Manufacturing", "Aerospace", "Healthcare"],
+      "interests": ["technical", "hands-on", "problem-solving", "precision", "innovation", "mechanical", "troubleshooting"],
+      "certifications": ["Equipment-specific certifications", "HVAC License", "Electrical License"],
+      "getting_started": ["Gain specialized equipment training", "Complete relevant apprenticeships", "Pursue technical certifications", "Build troubleshooting skills", "Stay current with equipment updates"],
+      "marketing_tips": ["Emphasize your military vehicle and equipment maintenance expertise", "Highlight your technical troubleshooting abilities", "Showcase your attention to detail and precision", "Demonstrate your commitment to equipment reliability"],
+      "veteran_friendly_companies": [
+        {"name": "Caterpillar", "description": "Equipment manufacturer with technician roles"},
+        {"name": "John Deere", "description": "Agricultural equipment with service centers"},
+        {"name": "Siemens", "description": "Industrial equipment with technician positions"},
+        {"name": "GE Healthcare", "description": "Medical equipment support roles"}
+      ]
+    },
+    {
+      "id": "contractor_manager",
+      "title": "Contractor Manager",
+      "description": "Manages defense and government contractors",
+      "required_skills": ["contractor management", "government relations", "compliance", "communication"],
+      "salary_range": "$75,000 - $140,000",
+      "growth_potential": "High",
+      "industries": ["Defense", "Government", "Federal Contractors"],
+      "interests": ["business", "government", "leadership", "finance", "strategy", "compliance", "federal", "public service"],
+      "certifications": ["Government Contracting Certificate", "FAR/DFARS Training", "Compliance Certification"],
+      "getting_started": ["Gain military experience (excellent foundation)", "Learn government contracting regulations (FAR, DFARS)", "Study federal acquisition procedures", "Pursue government contracting certifications", "Build relationships with federal agencies"],
+      "marketing_tips": ["Leverage your inside military knowledge of contracting processes", "Emphasize your understanding of government compliance requirements", "Highlight your relationship-building and negotiation skills", "Showcase your federal acquisition and procurement expertise"],
+      "veteran_friendly_companies": [
+        {"name": "General Dynamics", "description": "Major defense contractor with government relations"},
+        {"name": "Booz Allen Hamilton", "description": "Top government contractor employer"},
+        {"name": "Lockheed Martin", "description": "Defense contractor with government contracts"},
+        {"name": "Raytheon", "description": "Aerospace/defense contractor with major government work"}
+      ]
+    },
+    {
+      "id": "logistics_manager",
+      "title": "Logistics Manager",
+      "description": "Manages complex logistics and distribution networks",
+      "required_skills": ["logistics management", "supply chain", "planning", "vendor relations"],
+      "salary_range": "$70,000 - $130,000",
+      "growth_potential": "High",
+      "industries": ["Logistics", "Retail", "Manufacturing"],
+      "interests": ["organization", "problem-solving", "efficiency", "business", "logistics", "sustainability", "transportation", "supply chain"],
+      "certifications": ["APICS CSCP", "APICS CPIM", "SOLE Logistics Certification"],
+      "getting_started": ["Gain 5+ years supply chain or logistics experience", "Study advanced logistics and supply chain management", "Pursue APICS or SOLE certifications", "Learn logistics software systems", "Develop strategic planning skills"],
+      "marketing_tips": ["Emphasize your military logistics coordination and supply chain expertise", "Highlight your ability to manage complex distribution operations", "Showcase your cost optimization and efficiency improvements", "Demonstrate your vendor management and negotiation skills"],
+      "veteran_friendly_companies": [
+        {"name": "UPS", "description": "World's largest logistics company with veteran programs"},
+        {"name": "FedEx", "description": "Major logistics with extensive operations"},
+        {"name": "Amazon", "description": "Massive logistics and supply chain operations"},
+        {"name": "XPO Logistics", "description": "Transportation and logistics with military hiring"}
+      ]
+    },
+    {
+      "id": "training_director",
+      "title": "Training Director",
+      "description": "Develops and manages organizational training programs",
+      "required_skills": ["training development", "instruction", "leadership", "communication"],
+      "salary_range": "$70,000 - $125,000",
+      "growth_potential": "High",
+      "industries": ["Corporate", "Healthcare", "Government"],
+      "interests": ["teaching", "people development", "leadership", "organization", "creativity", "mentoring", "learning", "communication"],
+      "certifications": ["Instructional Design Certificate", "IDOL (Instructional Design Online Learning)", "Training & Development Certificate"],
+      "getting_started": ["Gain 5+ years training or instruction experience", "Study instructional design principles", "Complete training and development certifications", "Learn LMS (Learning Management Systems)", "Develop curriculum development skills"],
+      "marketing_tips": ["Emphasize your military training and instruction background", "Highlight your ability to develop effective training programs", "Showcase your leadership and mentorship skills", "Demonstrate your understanding of adult learning principles"],
+      "veteran_friendly_companies": [
+        {"name": "Google", "description": "Tech company with training development roles"},
+        {"name": "Microsoft", "description": "Learning and development with military focus"},
+        {"name": "JPMorgan Chase", "description": "Financial services with extensive training operations"},
+        {"name": "LinkedIn Learning", "description": "Online learning platform with training roles"}
+      ]
+    },
+    {
+      "id": "risk_manager",
+      "title": "Risk Manager",
+      "description": "Identifies and mitigates organizational risks",
+      "required_skills": ["risk assessment", "mitigation planning", "compliance", "analysis"],
+      "salary_range": "$75,000 - $140,000",
+      "growth_potential": "High",
+      "industries": ["Finance", "Insurance", "Healthcare"],
+      "interests": ["problem-solving", "analysis", "compliance", "finance", "business", "risk mitigation", "insurance", "regulations"],
+      "certifications": ["FRM (Financial Risk Manager)", "ARM (Associate in Risk Management)", "Certified Risk Manager"],
+      "getting_started": ["Gain 3-5 years compliance or risk experience", "Study risk management frameworks", "Learn quantitative risk analysis", "Pursue FRM or ARM certification", "Develop mitigation strategy expertise"],
+      "marketing_tips": ["Translate your military risk assessment and threat mitigation experience", "Emphasize your ability to identify complex risks and develop solutions", "Highlight your strategic planning and compliance expertise", "Showcase your analytical and decision-making abilities"],
+      "veteran_friendly_companies": [
+        {"name": "JPMorgan Chase", "description": "Major banking with risk management teams"},
+        {"name": "Goldman Sachs", "description": "Investment banking with risk roles"},
+        {"name": "Deloitte", "description": "Consulting with risk management practice"},
+        {"name": "Accenture", "description": "Consulting firm with risk and compliance services"}
+      ]
+    },
+    {
+      "id": "construction_manager",
+      "title": "Construction Manager",
+      "description": "Manages construction projects and teams",
+      "required_skills": ["project management", "planning", "leadership", "problem-solving"],
+      "salary_range": "$80,000 - $150,000",
+      "growth_potential": "High",
+      "industries": ["Construction", "Real Estate", "Engineering"],
+      "interests": ["leadership", "problem-solving", "business", "project management", "strategy", "innovation", "construction", "planning"],
+      "certifications": ["Certified Construction Manager (CCM)", "PMP", "LEED Certification"],
+      "getting_started": ["Gain 5+ years construction experience", "Study construction management principles", "Pursue CCM or PMP certification", "Learn construction software and BIM", "Develop safety and compliance expertise"],
+      "marketing_tips": ["Emphasize your military construction engineering and project management experience", "Highlight your ability to manage large projects and budgets", "Showcase your safety compliance and risk management skills", "Demonstrate your leadership of diverse teams"],
+      "veteran_friendly_companies": [
+        {"name": "Bechtel", "description": "Major engineering and construction contractor"},
+        {"name": "Kiewit", "description": "Construction company with military hiring programs"},
+        {"name": "Turner Construction", "description": "Major construction firm with military focus"},
+        {"name": "Skanska", "description": "Global construction company with veteran programs"}
+      ]
+    },
+    {
+      "id": "automotive_manager",
+      "title": "Automotive Service Manager",
+      "description": "Manages automotive service operations and teams",
+      "required_skills": ["automotive knowledge", "leadership", "customer service", "business management"],
+      "salary_range": "$60,000 - $110,000",
+      "growth_potential": "High",
+      "industries": ["Automotive", "Transportation"],
+      "interests": ["technical", "leadership", "business", "problem-solving", "customer service", "innovation", "automotive", "service excellence"],
+      "certifications": ["ASE Master Technician", "Automotive Management Certification", "Customer Service Excellence"],
+      "getting_started": ["Gain 5+ years automotive technician experience", "Complete automotive management training", "Study business management principles", "Learn service software systems", "Develop customer service leadership"],
+      "marketing_tips": ["Translate your military vehicle maintenance expertise to automotive management", "Emphasize your technical knowledge and quality focus", "Highlight your team leadership and operational efficiency", "Showcase your customer relationship and problem-solving abilities"],
+      "veteran_friendly_companies": [
+        {"name": "Toyota", "description": "Automotive dealerships with management roles"},
+        {"name": "Ford", "description": "Automotive with service centers nationwide"},
+        {"name": "BMW", "description": "Luxury automotive with service management"},
+        {"name": "General Motors", "description": "Automotive with extensive service networks"}
+      ]
+    }
+  ]
+}

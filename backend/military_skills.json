@@ -1,0 +1,454 @@
+{
+  "military_skills": [
+    {
+      "id": "squad_leader",
+      "military_term": "Squad Leader",
+      "description": "Led a team of soldiers in field operations",
+      "keywords": ["leadership", "squad", "team lead", "command", "supervision"],
+      "civilian_translations": ["Team Lead", "Supervisor", "Project Manager"],
+      "key_skills": ["leadership", "team management", "decision making", "communication"],
+      "related_careers": ["management", "project management", "operations"]
+    },
+    {
+      "id": "vehicle_mechanic",
+      "military_term": "Vehicle Mechanic",
+      "description": "Maintained and repaired military vehicles and equipment",
+      "keywords": ["mechanic", "maintenance", "repair", "vehicle", "equipment"],
+      "civilian_translations": ["Automotive Technician", "Maintenance Technician", "Equipment Specialist"],
+      "key_skills": ["troubleshooting", "mechanical repair", "maintenance", "technical knowledge"],
+      "related_careers": ["automotive", "equipment maintenance", "facilities"]
+    },
+    {
+      "id": "communications",
+      "military_term": "Communications Specialist",
+      "description": "Operated and maintained communications equipment and systems",
+      "keywords": ["communication", "radio", "signal", "network", "equipment"],
+      "civilian_translations": ["Network Technician", "IT Support Specialist", "Telecommunications Technician"],
+      "key_skills": ["technical support", "troubleshooting", "systems operation", "network management"],
+      "related_careers": ["IT", "telecommunications", "tech support"]
+    },
+    {
+      "id": "supply_sergeant",
+      "military_term": "Supply Sergeant",
+      "description": "Managed inventory and distribution of military supplies",
+      "keywords": ["supply", "inventory", "logistics", "distribution", "management"],
+      "civilian_translations": ["Supply Chain Coordinator", "Inventory Manager", "Logistics Specialist"],
+      "key_skills": ["inventory management", "organization", "planning", "procurement"],
+      "related_careers": ["logistics", "supply chain", "operations"]
+    },
+    {
+      "id": "combat_medic",
+      "military_term": "Combat Medic",
+      "description": "Provided emergency medical care in combat situations",
+      "keywords": ["medic", "medical", "healthcare", "emergency", "patient care"],
+      "civilian_translations": ["EMT/Paramedic", "Nursing Assistant", "Emergency Medical Technician"],
+      "key_skills": ["emergency response", "medical knowledge", "patient care", "quick decision making"],
+      "related_careers": ["healthcare", "emergency services", "nursing"]
+    },
+    {
+      "id": "military_police",
+      "military_term": "Military Police Officer",
+      "description": "Maintained security and enforced military regulations",
+      "keywords": ["security", "police", "enforcement", "patrol", "protection"],
+      "civilian_translations": ["Security Officer", "Loss Prevention Specialist", "Law Enforcement Officer"],
+      "key_skills": ["threat assessment", "patrol", "emergency response", "law enforcement"],
+      "related_careers": ["security", "law enforcement", "loss prevention"]
+    },
+    {
+      "id": "drill_sergeant",
+      "military_term": "Drill Sergeant",
+      "description": "Trained and supervised new recruits in military procedures",
+      "keywords": ["training", "instruction", "drill", "leadership", "development"],
+      "civilian_translations": ["Training Coordinator", "Instructor", "HR Training Specialist"],
+      "key_skills": ["training", "instruction", "leadership", "communication"],
+      "related_careers": ["training", "education", "HR"]
+    },
+    {
+      "id": "compliance_officer",
+      "military_term": "Compliance Officer",
+      "description": "Ensured compliance with military and safety regulations",
+      "keywords": ["compliance", "regulations", "enforcement", "inspection", "quality"],
+      "civilian_translations": ["Compliance Officer", "Regulatory Specialist", "Quality Assurance Manager"],
+      "key_skills": ["compliance", "attention to detail", "regulations", "documentation"],
+      "related_careers": ["compliance", "quality assurance", "administration"]
+    },
+    {
+      "id": "it_specialist",
+      "military_term": "IT Specialist",
+      "description": "Managed computer systems, networks, and IT infrastructure",
+      "keywords": ["IT", "technology", "systems", "network", "computers"],
+      "civilian_translations": ["Systems Administrator", "Network Administrator", "IT Support Specialist"],
+      "key_skills": ["system administration", "networking", "technical support", "cybersecurity"],
+      "related_careers": ["IT", "technology", "systems administration"]
+    },
+    {
+      "id": "intelligence_analyst",
+      "military_term": "Intelligence Analyst",
+      "description": "Analyzed military intelligence, threats, and strategic data",
+      "keywords": ["intelligence", "analysis", "data", "research", "threat assessment"],
+      "civilian_translations": ["Data Analyst", "Business Analyst", "Intelligence Analyst"],
+      "key_skills": ["data analysis", "research", "critical thinking", "reporting"],
+      "related_careers": ["data analysis", "research", "business analysis", "finance"]
+    },
+    {
+      "id": "aircraft_maintenance",
+      "military_term": "Aircraft Maintenance Technician",
+      "description": "Maintained and repaired military aircraft and avionics",
+      "keywords": ["aircraft", "maintenance", "aviation", "repair", "mechanical"],
+      "civilian_translations": ["Aviation Technician", "Aircraft Mechanic", "Maintenance Technician"],
+      "key_skills": ["mechanical repair", "troubleshooting", "precision work", "safety compliance"],
+      "related_careers": ["aviation", "aerospace", "maintenance"]
+    },
+    {
+      "id": "cyber_specialist",
+      "military_term": "Cyber Security Specialist",
+      "description": "Protected military networks and systems from cyber threats",
+      "keywords": ["cybersecurity", "security", "network", "protection", "threat"],
+      "civilian_translations": ["Cybersecurity Analyst", "Information Security Specialist", "Security Engineer"],
+      "key_skills": ["cybersecurity", "network security", "threat analysis", "compliance"],
+      "related_careers": ["cybersecurity", "IT security", "defense"]
+    },
+    {
+      "id": "linguist",
+      "military_term": "Linguist",
+      "description": "Translated and interpreted foreign languages for military operations",
+      "keywords": ["language", "translation", "interpretation", "communication", "cultural"],
+      "civilian_translations": ["Translator", "Interpreter", "Language Specialist"],
+      "key_skills": ["language translation", "cultural awareness", "communication", "precision"],
+      "related_careers": ["translation", "diplomacy", "international business"]
+    },
+    {
+      "id": "chaplain",
+      "military_term": "Chaplain",
+      "description": "Provided spiritual and pastoral care to military personnel",
+      "keywords": ["chaplain", "counseling", "support", "welfare", "ministry"],
+      "civilian_translations": ["Counselor", "Social Worker", "Employee Assistance Specialist"],
+      "key_skills": ["counseling", "empathy", "communication", "support services"],
+      "related_careers": ["counseling", "social services", "HR", "training"]
+    },
+    {
+      "id": "combat_engineer",
+      "military_term": "Combat Engineer",
+      "description": "Designed and constructed military fortifications and structures",
+      "keywords": ["engineering", "construction", "design", "planning", "project"],
+      "civilian_translations": ["Civil Engineer", "Construction Manager", "Project Engineer"],
+      "key_skills": ["engineering", "project management", "planning", "technical design"],
+      "related_careers": ["engineering", "construction", "project management"]
+    },
+    {
+      "id": "procurement",
+      "military_term": "Procurement Specialist",
+      "description": "Managed purchasing and vendor relationships for military supplies",
+      "keywords": ["procurement", "purchasing", "vendor", "negotiation", "contracts"],
+      "civilian_translations": ["Procurement Specialist", "Purchasing Manager", "Contracts Manager"],
+      "key_skills": ["procurement", "negotiation", "vendor management", "contract management"],
+      "related_careers": ["procurement", "supply chain", "business operations", "finance"]
+    },
+    {
+      "id": "operations_coordinator",
+      "military_term": "Operations Coordinator",
+      "description": "Coordinated military operations and strategic planning",
+      "keywords": ["operations", "coordination", "planning", "strategy", "logistics"],
+      "civilian_translations": ["Operations Manager", "Coordinator", "Business Analyst"],
+      "key_skills": ["operations management", "planning", "coordination", "strategic thinking"],
+      "related_careers": ["operations", "management", "business analysis"]
+    },
+    {
+      "id": "finance_specialist",
+      "military_term": "Finance Specialist",
+      "description": "Managed military financial records and budgeting",
+      "keywords": ["finance", "accounting", "budget", "financial", "records"],
+      "civilian_translations": ["Accountant", "Financial Analyst", "Budget Analyst"],
+      "key_skills": ["accounting", "financial analysis", "budgeting", "attention to detail"],
+      "related_careers": ["finance", "accounting", "business"]
+    },
+    {
+      "id": "personnel_specialist",
+      "military_term": "Personnel Specialist",
+      "description": "Managed military personnel records and human resources operations",
+      "keywords": ["personnel", "human resources", "HR", "records", "administration"],
+      "civilian_translations": ["HR Specialist", "Recruiter", "HR Administrator"],
+      "key_skills": ["HR management", "recruitment", "administration", "communication"],
+      "related_careers": ["HR", "recruitment", "administration"]
+    },
+    {
+      "id": "logistics_officer",
+      "military_term": "Logistics Officer",
+      "description": "Planned and coordinated logistics operations for military units",
+      "keywords": ["logistics", "planning", "distribution", "supply chain", "coordination"],
+      "civilian_translations": ["Logistics Manager", "Supply Chain Manager", "Operations Manager"],
+      "key_skills": ["logistics", "supply chain management", "planning", "problem solving"],
+      "related_careers": ["logistics", "supply chain", "operations"]
+    },
+    {
+      "id": "public_affairs",
+      "military_term": "Public Affairs Officer",
+      "description": "Managed military communications and public relations",
+      "keywords": ["public affairs", "communications", "media", "relations", "marketing"],
+      "civilian_translations": ["Communications Manager", "Marketing Specialist", "Public Relations Officer"],
+      "key_skills": ["communications", "public relations", "marketing", "writing"],
+      "related_careers": ["marketing", "communications", "public relations"]
+    },
+    {
+      "id": "quality_assurance",
+      "military_term": "Quality Assurance Inspector",
+      "description": "Inspected and verified quality of military products and services",
+      "keywords": ["quality", "inspection", "assurance", "standards", "compliance"],
+      "civilian_translations": ["Quality Assurance Manager", "Inspector", "Compliance Officer"],
+      "key_skills": ["quality assurance", "inspection", "standards compliance", "documentation"],
+      "related_careers": ["quality assurance", "compliance", "operations"]
+    },
+    {
+      "id": "manufacturing_tech",
+      "military_term": "Manufacturing Technician",
+      "description": "Operated military manufacturing equipment and production lines",
+      "keywords": ["manufacturing", "production", "equipment operation", "technical"],
+      "civilian_translations": ["Production Technician", "Manufacturing Specialist", "Equipment Operator"],
+      "key_skills": ["manufacturing", "equipment operation", "quality control", "safety"],
+      "related_careers": ["manufacturing", "operations", "production"]
+    },
+    {
+      "id": "hvac_tech",
+      "military_term": "HVAC Technician",
+      "description": "Maintained and repaired heating, ventilation, and cooling systems",
+      "keywords": ["HVAC", "maintenance", "repair", "technical", "systems"],
+      "civilian_translations": ["HVAC Technician", "Maintenance Technician", "Facilities Manager"],
+      "key_skills": ["HVAC systems", "troubleshooting", "maintenance", "technical knowledge"],
+      "related_careers": ["facilities", "maintenance", "HVAC services"]
+    },
+    {
+      "id": "electrician",
+      "military_term": "Electrician",
+      "description": "Installed and maintained military electrical systems",
+      "keywords": ["electrician", "electrical", "maintenance", "installation", "repair"],
+      "civilian_translations": ["Electrician", "Electrical Technician", "Facilities Electrician"],
+      "key_skills": ["electrical systems", "troubleshooting", "safety compliance", "technical knowledge"],
+      "related_careers": ["electrical", "facilities", "construction"]
+    },
+    {
+      "id": "heavy_equipment",
+      "military_term": "Heavy Equipment Operator",
+      "description": "Operated military heavy equipment and machinery",
+      "keywords": ["equipment operator", "heavy equipment", "machinery", "operation"],
+      "civilian_translations": ["Equipment Operator", "Operator", "Heavy Equipment Specialist"],
+      "key_skills": ["equipment operation", "mechanical knowledge", "safety", "coordination"],
+      "related_careers": ["construction", "operations", "transportation"]
+    },
+    {
+      "id": "data_analyst",
+      "military_term": "Data Analyst",
+      "description": "Collected and analyzed military operational data",
+      "keywords": ["data", "analysis", "analytics", "reporting", "statistics"],
+      "civilian_translations": ["Data Analyst", "Business Analyst", "Data Specialist"],
+      "key_skills": ["data analysis", "statistics", "reporting", "critical thinking"],
+      "related_careers": ["data analysis", "business analysis", "finance"]
+    },
+    {
+      "id": "training_officer",
+      "military_term": "Training Officer",
+      "description": "Developed and delivered military training programs",
+      "keywords": ["training", "instruction", "development", "teaching", "leadership"],
+      "civilian_translations": ["Training Manager", "Instructor", "Learning Specialist"],
+      "key_skills": ["training development", "instruction", "leadership", "communication"],
+      "related_careers": ["training", "education", "HR development"]
+    },
+    {
+      "id": "facilities_manager",
+      "military_term": "Facilities Manager",
+      "description": "Managed military base facilities and infrastructure",
+      "keywords": ["facilities", "management", "maintenance", "coordination", "operations"],
+      "civilian_translations": ["Facilities Manager", "Operations Manager", "Property Manager"],
+      "key_skills": ["facilities management", "operations coordination", "vendor management"],
+      "related_careers": ["facilities", "operations", "property management"]
+    },
+    {
+      "id": "project_manager",
+      "military_term": "Project Manager",
+      "description": "Managed large-scale military construction or technology projects",
+      "keywords": ["project", "management", "planning", "leadership", "coordination"],
+      "civilian_translations": ["Project Manager", "Program Manager", "Operations Manager"],
+      "key_skills": ["project management", "planning", "leadership", "budget management"],
+      "related_careers": ["project management", "operations", "construction"]
+    },
+    {
+      "id": "supply_chain_manager",
+      "military_term": "Supply Chain Manager",
+      "description": "Oversaw end-to-end supply chain and distribution operations",
+      "keywords": ["supply chain", "distribution", "logistics", "management", "operations"],
+      "civilian_translations": ["Supply Chain Manager", "Logistics Manager", "Operations Manager"],
+      "key_skills": ["supply chain management", "logistics", "vendor management", "planning"],
+      "related_careers": ["supply chain", "logistics", "operations", "finance"]
+    },
+    {
+      "id": "hr_manager",
+      "military_term": "HR Manager",
+      "description": "Managed military human resources operations and personnel",
+      "keywords": ["HR", "human resources", "personnel", "recruitment", "management"],
+      "civilian_translations": ["HR Manager", "Recruiter", "HR Director"],
+      "key_skills": ["HR management", "recruitment", "employee relations", "administration"],
+      "related_careers": ["HR", "recruitment", "operations"]
+    },
+    {
+      "id": "finance_officer",
+      "military_term": "Finance Officer",
+      "description": "Managed military budgets and financial operations",
+      "keywords": ["finance", "budget", "accounting", "financial", "management"],
+      "civilian_translations": ["Financial Manager", "Budget Manager", "Finance Director"],
+      "key_skills": ["financial management", "budgeting", "accounting", "analysis"],
+      "related_careers": ["finance", "accounting", "business management"]
+    },
+    {
+      "id": "procurement_manager",
+      "military_term": "Procurement Manager",
+      "description": "Oversaw military procurement and contract negotiations",
+      "keywords": ["procurement", "contracts", "negotiation", "vendor", "purchasing"],
+      "civilian_translations": ["Procurement Manager", "Contracts Manager", "Purchasing Director"],
+      "key_skills": ["procurement strategy", "negotiation", "contract management", "vendor relations"],
+      "related_careers": ["procurement", "supply chain", "business operations", "finance"]
+    },
+    {
+      "id": "strategy_planner",
+      "military_term": "Strategic Planner",
+      "description": "Developed military strategy and long-term planning initiatives",
+      "keywords": ["strategy", "planning", "analysis", "leadership", "thinking"],
+      "civilian_translations": ["Strategic Planner", "Business Strategist", "Consultant"],
+      "key_skills": ["strategic planning", "analysis", "leadership", "critical thinking"],
+      "related_careers": ["strategy", "consulting", "management"]
+    },
+    {
+      "id": "risk_manager",
+      "military_term": "Risk Management Officer",
+      "description": "Identified and mitigated operational risks for military operations",
+      "keywords": ["risk", "management", "assessment", "mitigation", "planning"],
+      "civilian_translations": ["Risk Manager", "Compliance Officer", "Safety Manager"],
+      "key_skills": ["risk assessment", "mitigation planning", "compliance", "analysis"],
+      "related_careers": ["risk management", "compliance", "operations", "finance"]
+    },
+    {
+      "id": "compliance_manager",
+      "military_term": "Compliance Manager",
+      "description": "Ensured compliance with military regulations and standards",
+      "keywords": ["compliance", "regulations", "standards", "enforcement", "audit"],
+      "civilian_translations": ["Compliance Manager", "Audit Manager", "Quality Manager"],
+      "key_skills": ["compliance management", "auditing", "regulations", "documentation"],
+      "related_careers": ["compliance", "quality assurance", "audit", "finance"]
+    },
+    {
+      "id": "info_security",
+      "military_term": "Information Security Manager",
+      "description": "Managed military information systems and security protocols",
+      "keywords": ["information", "systems", "security", "IT", "technology"],
+      "civilian_translations": ["IT Manager", "Systems Manager", "Information Security Manager"],
+      "key_skills": ["information management", "IT systems", "security", "operations"],
+      "related_careers": ["IT", "information security", "systems management"]
+    },
+    {
+      "id": "communications_manager",
+      "military_term": "Communications Manager",
+      "description": "Oversaw military communications systems and infrastructure",
+      "keywords": ["communications", "systems", "networks", "management", "technical"],
+      "civilian_translations": ["Communications Manager", "Network Manager", "IT Manager"],
+      "key_skills": ["communications systems", "network management", "technical expertise"],
+      "related_careers": ["IT", "telecommunications", "operations"]
+    },
+    {
+      "id": "business_development",
+      "military_term": "Defense Liaison Officer",
+      "description": "Coordinated between military and defense contractors",
+      "keywords": ["defense", "contractor", "coordination", "business", "liaison"],
+      "civilian_translations": ["Business Development Manager", "Account Manager", "Contractor Liaison"],
+      "key_skills": ["business development", "relationship management", "coordination"],
+      "related_careers": ["business development", "sales", "operations"]
+    },
+    {
+      "id": "research_analyst",
+      "military_term": "Research Analyst",
+      "description": "Conducted research and analysis for military strategic initiatives",
+      "keywords": ["research", "analysis", "investigation", "study", "evaluation"],
+      "civilian_translations": ["Research Analyst", "Policy Analyst", "Strategic Analyst"],
+      "key_skills": ["research", "analysis", "writing", "critical thinking"],
+      "related_careers": ["research", "analysis", "consulting"]
+    },
+    {
+      "id": "safety_officer",
+      "military_term": "Safety Officer",
+      "description": "Ensured workplace safety and enforced safety protocols",
+      "keywords": ["safety", "hazard", "prevention", "protocols", "compliance"],
+      "civilian_translations": ["Safety Officer", "Safety Manager", "OSHA Specialist"],
+      "key_skills": ["safety protocols", "hazard assessment", "compliance", "training"],
+      "related_careers": ["safety", "compliance", "HR"]
+    },
+    {
+      "id": "weapons_system_operator",
+      "military_term": "Weapons System Operator",
+      "description": "Operated and maintained weapons systems and tactical equipment",
+      "keywords": ["weapons", "system", "operator", "tactical", "equipment"],
+      "civilian_translations": ["Systems Operator", "Equipment Specialist", "Technical Operator"],
+      "key_skills": ["system operation", "technical knowledge", "precision", "safety compliance"],
+      "related_careers": ["equipment specialist", "systems administration", "technical operations"]
+    },
+    {
+      "id": "reconnaissance_scout",
+      "military_term": "Reconnaissance Scout",
+      "description": "Conducted surveillance, route reconnaissance, and terrain analysis to support mission planning",
+      "keywords": ["recon", "scout", "surveillance", "intelligence", "route planning"],
+      "civilian_translations": ["Field Intelligence Specialist", "Security Analyst", "Operations Analyst"],
+      "key_skills": ["situational awareness", "information gathering", "reporting", "risk assessment"],
+      "related_careers": ["security", "intelligence analysis", "operations"]
+    },
+    {
+      "id": "explosive_ordnance_disposal",
+      "military_term": "Explosive Ordnance Disposal Technician",
+      "description": "Safely identified, disarmed and disposed of explosive devices",
+      "keywords": ["explosive", "ordnance", "disposal", "bomb", "safety"],
+      "civilian_translations": ["Safety Specialist", "Hazardous Materials Technician", "Incident Response Specialist"],
+      "key_skills": ["risk assessment", "problem solving", "safety awareness", "precision work"],
+      "related_careers": ["safety management", "emergency response", "hazmat specialist"]
+    },
+    {
+      "id": "interpreter",
+      "military_term": "Military Interpreter",
+      "description": "Provided language translation and cultural interpretation support",
+      "keywords": ["interpreter", "translation", "language", "cultural", "communication"],
+      "civilian_translations": ["Translator", "Cultural Liaison", "Business Interpreter"],
+      "key_skills": ["language proficiency", "cultural awareness", "communication", "accuracy"],
+      "related_careers": ["translation services", "international relations", "cultural services"]
+    },
+    {
+      "id": "survival_specialist",
+      "military_term": "Survival Specialist",
+      "description": "Trained personnel in survival skills and wilderness tactics",
+      "keywords": ["survival", "training", "wilderness", "resilience", "self-reliance"],
+      "civilian_translations": ["Outdoor Educator", "Training Specialist", "Safety Instructor"],
+      "key_skills": ["training delivery", "crisis management", "quick thinking", "leadership"],
+      "related_careers": ["education", "training", "outdoor services"]
+    },
+    {
+      "id": "bulk_fuel_specialist",
+      "military_term": "Bulk Fuel Specialist",
+      "description": "Managed petroleum fuel storage, quality checks, and distribution for ground and aviation operations",
+      "keywords": ["fuel", "petroleum", "storage", "distribution", "hazmat"],
+      "civilian_translations": ["Fuel Operations Specialist", "Petroleum Supply Technician", "Terminal Operator"],
+      "key_skills": ["fuel inventory control", "safety compliance", "quality assurance", "logistics coordination"],
+      "related_careers": ["oil and gas", "logistics", "operations", "safety"]
+    },
+    {
+      "id": "psychological_operations",
+      "military_term": "Psychological Operations Specialist",
+      "description": "Planned and executed psychological operations and influence campaigns",
+      "keywords": ["psychological", "operations", "strategy", "communication", "influence"],
+      "civilian_translations": ["Communications Strategist", "Marketing Specialist", "Public Affairs Officer"],
+      "key_skills": ["strategic communication", "analysis", "research", "persuasion"],
+      "related_careers": ["marketing", "communications", "public relations"]
+    },
+    {
+      "id": "special_operations_medic",
+      "military_term": "Special Operations Medic",
+      "description": "Provided advanced medical care in high-stress and challenging environments",
+      "keywords": ["medic", "special operations", "medical", "advanced care", "trauma"],
+      "civilian_translations": ["Critical Care Paramedic", "Emergency Medicine Technician", "Flight Medic"],
+      "key_skills": ["advanced medical knowledge", "emergency response", "adaptability", "decision making"],
+      "related_careers": ["emergency medicine", "critical care", "flight services"]
+    }
+  ]
+}

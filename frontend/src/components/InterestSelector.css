@@ -1,0 +1,41 @@
+.interest-selector {
+  width: 100%;
+}
+
+.interests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.interest-button {
+  padding: 10px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  color: #666;
+  font-weight: 500;
+}
+
+.interest-button:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.interest-button.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.selected-interests {
+  background: #f0f0f0;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  color: #333;
+}
