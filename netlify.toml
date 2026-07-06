@@ -1,8 +1,7 @@
 [build]
-  base = "frontend"
-  # Install and build from the frontend folder only.
-  command = "npm ci && npm run build"
-  publish = "build"
+  # Explicitly install and build frontend from repo root.
+  command = "npm --prefix frontend install && npm --prefix frontend run build"
+  publish = "frontend/build"
 
 [build.environment]
   NODE_VERSION = "20"
