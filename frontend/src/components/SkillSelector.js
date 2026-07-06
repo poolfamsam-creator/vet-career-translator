@@ -10,22 +10,22 @@ function SkillSelector({ selectedSkills = [], onRoleToggle }) {
   const [expandedSkill, setExpandedSkill] = useState(null);
 
   useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const response = await axios.get(`${API_URL}/military-skills`);
+        const sortedSkills = response.data.sort((a, b) =>
+          a.military_term.localeCompare(b.military_term)
+        );
+        setSkills(sortedSkills);
+      } catch (error) {
+        console.error('Error fetching skills:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchSkills();
   }, []);
-
-  const fetchSkills = async () => {
-    try {
-      const response = await axios.get(`${API_URL}/military-skills`);
-      const sortedSkills = response.data.sort((a, b) => 
-        a.military_term.localeCompare(b.military_term)
-      );
-      setSkills(sortedSkills);
-    } catch (error) {
-      console.error('Error fetching skills:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   if (loading) {
     return <div className="skill-selector-loading">Loading skills...</div>;
