@@ -9,23 +9,28 @@ function SkillSummary({ selectedSkills }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (selectedSkills.length > 0) {
-      fetchSummary();
-    }
-  }, [selectedSkills]);
+    const fetchSummary = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.post(`${API_URL}/skills-summary`, {
+          skill_ids: selectedSkills
+        });
+        setSummary(response.data);
+      } catch (error) {
+        console.error('Error fetching summary:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const fetchSummary = async () => {
-    try {
-      const response = await axios.post(`${API_URL}/skills-summary`, {
-        skill_ids: selectedSkills
-      });
-      setSummary(response.data);
-    } catch (error) {
-      console.error('Error fetching summary:', error);
-    } finally {
+    if (selectedSkills.length === 0) {
+      setSummary(null);
       setLoading(false);
+      return;
     }
-  };
+
+    fetchSummary();
+  }, [selectedSkills]);
 
   if (loading || !summary) {
     return <div>Loading summary...</div>;

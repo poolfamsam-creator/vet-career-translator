@@ -25,6 +25,15 @@ function App() {
 
   // Load available interests on mount
   useEffect(() => {
+    const fetchInterests = async () => {
+      try {
+        const response = await axios.get(`${API_URL}/interests`);
+        setAvailableInterests(response.data);
+      } catch (error) {
+        console.error('Error fetching interests:', error);
+      }
+    };
+
     initAnalytics();
     fetchInterests();
   }, []);
@@ -38,15 +47,6 @@ function App() {
 
     trackPageView(pagePath, 'Military Career Translator');
   }, [currentPage, activeTab]);
-
-  const fetchInterests = async () => {
-    try {
-      const response = await axios.get(`${API_URL}/interests`);
-      setAvailableInterests(response.data);
-    } catch (error) {
-      console.error('Error fetching interests:', error);
-    }
-  };
 
   const handleRoleToggle = (roleId) => {
     setSelectedRoles(prev =>

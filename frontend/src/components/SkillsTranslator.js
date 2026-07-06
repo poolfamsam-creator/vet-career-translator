@@ -19,31 +19,31 @@ function SkillsTranslator({ selectedRoles }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    const fetchMilitarySkills = async () => {
+      try {
+        const response = await axios.get(`${API_URL}/military-skills`);
+        // Sort by military_term alphabetically
+        const sortedSkills = response.data.sort((a, b) =>
+          a.military_term.localeCompare(b.military_term)
+        );
+        setMilitarySkills(sortedSkills);
+      } catch (error) {
+        console.error('Error fetching skills:', error);
+      }
+    };
+
+    const fetchCareers = async () => {
+      try {
+        const response = await axios.get(`${API_URL}/careers`);
+        setCareers(response.data || []);
+      } catch (error) {
+        console.error('Error fetching careers:', error);
+      }
+    };
+
     fetchMilitarySkills();
     fetchCareers();
   }, []);
-
-  const fetchMilitarySkills = async () => {
-    try {
-      const response = await axios.get(`${API_URL}/military-skills`);
-      // Sort by military_term alphabetically
-      const sortedSkills = response.data.sort((a, b) => 
-        a.military_term.localeCompare(b.military_term)
-      );
-      setMilitarySkills(sortedSkills);
-    } catch (error) {
-      console.error('Error fetching skills:', error);
-    }
-  };
-
-  const fetchCareers = async () => {
-    try {
-      const response = await axios.get(`${API_URL}/careers`);
-      setCareers(response.data || []);
-    } catch (error) {
-      console.error('Error fetching careers:', error);
-    }
-  };
 
   const generateTranslation = async () => {
     if (!targetRole.trim()) {
