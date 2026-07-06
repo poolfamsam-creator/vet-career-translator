@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { trackEvent } from '../analytics';
 import './SkillsTranslator.css';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
@@ -63,6 +64,13 @@ function SkillsTranslator({ selectedRoles }) {
       setResumeSummary(translation.summary);
       setBulletPoints(translation.bullets);
       setShowTranslation(true);
+
+      trackEvent('generate_translation', {
+        selected_roles_count: selectedRoles.length,
+        target_role: targetRole.trim().slice(0, 100),
+        selected_skills_found_count: selectedSkillsData.length,
+        bullet_count: translation.bullets.length
+      });
     } catch (error) {
       console.error('Error generating translation:', error);
       alert('Error generating translation');
@@ -156,6 +164,18 @@ function SkillsTranslator({ selectedRoles }) {
     }
   ];
 
+  const copyTextAndTrack = async (text, copyType) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      trackEvent('copy_translation_content', {
+        copy_type: copyType,
+        target_role: targetRole.trim().slice(0, 100)
+      });
+    } catch (error) {
+      console.error('Error copying text:', error);
+    }
+  };
+
   return (
     <div className="skills-translator">
       <div className="translator-header">
@@ -220,7 +240,7 @@ function SkillsTranslator({ selectedRoles }) {
               <div className="summary-box">
                 <p>{resumeSummary}</p>
               </div>
-              <button className="copy-btn" onClick={() => navigator.clipboard.writeText(resumeSummary)}>
+              <button className="copy-btn" onClick={() => copyTextAndTrack(resumeSummary, 'summary')}>
                 Copy to Clipboard
               </button>
             </div>
@@ -236,7 +256,7 @@ function SkillsTranslator({ selectedRoles }) {
               </div>
               <button 
                 className="copy-btn" 
-                onClick={() => navigator.clipboard.writeText(bulletPoints.map((b, i) => `• ${b}`).join('\n'))}
+                onClick={() => copyTextAndTrack(bulletPoints.map((b) => `• ${b}`).join('\n'), 'bullets')}
               >
                 Copy All Bullets
               </button>

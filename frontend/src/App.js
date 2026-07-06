@@ -7,6 +7,7 @@ import InterestSelector from './components/InterestSelector';
 import RoleDescriptionInput from './components/RoleDescriptionInput';
 import CareerResults from './components/CareerResults';
 import SkillsTranslator from './components/SkillsTranslator';
+import { initAnalytics, trackEvent, trackPageView } from './analytics';
 import './App.css';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
@@ -23,8 +24,19 @@ function App() {
 
   // Load available interests on mount
   useEffect(() => {
+    initAnalytics();
     fetchInterests();
   }, []);
+
+  useEffect(() => {
+    const pagePath = currentPage === 'translator'
+      ? '/translator'
+      : activeTab === 'results'
+        ? '/matcher/results'
+        : '/matcher/skills';
+
+    trackPageView(pagePath, 'Military Career Translator');
+  }, [currentPage, activeTab]);
 
   const fetchInterests = async () => {
     try {
@@ -66,6 +78,13 @@ function App() {
       });
       setMatchedCareers(response.data);
       setActiveTab('results');
+
+      trackEvent('find_careers', {
+        selected_roles_count: selectedRoles.length,
+        selected_interests_count: selectedInterests.length,
+        has_role_description: roleDescription.trim().length > 0,
+        matches_count: response.data.length
+      });
     } catch (error) {
       console.error('Error matching careers:', error);
       alert('Error finding matching careers');
@@ -75,6 +94,12 @@ function App() {
   };
 
   const handleClear = () => {
+    trackEvent('clear_filters', {
+      selected_roles_count: selectedRoles.length,
+      selected_interests_count: selectedInterests.length,
+      had_role_description: roleDescription.trim().length > 0
+    });
+
     setSelectedRoles([]);
     setSelectedInterests([]);
     setRoleDescription('');
