@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import './SkillSummary.css';
 
@@ -8,13 +8,7 @@ function SkillSummary({ selectedSkills }) {
   const [summary, setSummary] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (selectedSkills.length > 0) {
-      fetchSummary();
-    }
-  }, [selectedSkills]);
-
-  const fetchSummary = async () => {
+  const fetchSummary = useCallback(async () => {
     try {
       const response = await axios.post(`${API_URL}/skills-summary`, {
         skill_ids: selectedSkills
@@ -25,7 +19,13 @@ function SkillSummary({ selectedSkills }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [selectedSkills]);
+
+  useEffect(() => {
+    if (selectedSkills.length > 0) {
+      fetchSummary();
+    }
+  }, [selectedSkills, fetchSummary]);
 
   if (loading || !summary) {
     return <div>Loading summary...</div>;
