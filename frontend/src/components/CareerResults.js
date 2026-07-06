@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { trackEvent } from '../analytics';
 import './CareerResults.css';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
 function CareerResults({ careers }) {
   const [expandedDetails, setExpandedDetails] = useState({});
+  const [isHelpful, setIsHelpful] = useState('');
+  const [improvementNote, setImprovementNote] = useState('');
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false);
 
   const getMatchColor = (score) => {
     return score > 50 ? '#22c55e' : '#eab308';
@@ -36,11 +43,38 @@ function CareerResults({ careers }) {
     return 'How this helps veterans: these employers and organizations typically offer transition support, networking access, and veteran-aware recruiting practices.';
   };
 
+  const handleFeedbackSubmit = async (e) => {
+    e.preventDefault();
+
+    trackEvent('results_feedback_submitted', {
+      was_helpful: isHelpful || 'not_selected',
+      improvement_note_length: improvementNote.trim().length
+    });
+
+    try {
+      await axios.post(`${API_URL}/feedback`, {
+        helpful: isHelpful || 'not_selected',
+        improvement_note: improvementNote.trim(),
+        matched_count: careers.length,
+        top_career: careers[0]?.title || ''
+      });
+    } catch (error) {
+      console.error('Error saving feedback:', error);
+    }
+
+    setFeedbackSubmitted(true);
+  };
+
   return (
     <div className="career-results">
       <div className="results-header">
         <h2>Matched Careers</h2>
         <p>Based on your military skills and interests</p>
+        <div className="score-explainer">
+          <strong>How match percentage works:</strong> your score is estimated from skill overlap,
+          selected interest alignment, and role-description relevance. Higher percentages mean
+          stronger overall alignment to typical requirements.
+        </div>
       </div>
 
       <div className="careers-list">
@@ -170,6 +204,49 @@ function CareerResults({ careers }) {
           <p>No careers matched your criteria. Try selecting different skills or interests.</p>
         </div>
       )}
+
+      <div className="feedback-section">
+        <h3>Was this helpful?</h3>
+        {!feedbackSubmitted ? (
+          <form onSubmit={handleFeedbackSubmit}>
+            <div className="feedback-choice">
+              <label>
+                <input
+                  type="radio"
+                  name="helpful"
+                  value="yes"
+                  checked={isHelpful === 'yes'}
+                  onChange={(e) => setIsHelpful(e.target.value)}
+                />
+                Yes
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="helpful"
+                  value="no"
+                  checked={isHelpful === 'no'}
+                  onChange={(e) => setIsHelpful(e.target.value)}
+                />
+                No
+              </label>
+            </div>
+
+            <label htmlFor="feedback-improve">What could improve?</label>
+            <textarea
+              id="feedback-improve"
+              rows="3"
+              value={improvementNote}
+              onChange={(e) => setImprovementNote(e.target.value)}
+              placeholder="Share what would make these results more useful for your transition."
+            />
+
+            <button type="submit" className="feedback-btn">Submit Feedback</button>
+          </form>
+        ) : (
+          <p className="feedback-thanks">Thanks for your feedback. It helps improve this transition tool for other veterans.</p>
+        )}
+      </div>
     </div>
   );
 }

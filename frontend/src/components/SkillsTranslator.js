@@ -11,7 +11,11 @@ function SkillsTranslator({ selectedRoles }) {
   const [targetRole, setTargetRole] = useState('');
   const [resumeSummary, setResumeSummary] = useState('');
   const [bulletPoints, setBulletPoints] = useState([]);
+  const [listingReferences, setListingReferences] = useState([]);
   const [showTranslation, setShowTranslation] = useState(false);
+  const [showTranslationNotice, setShowTranslationNotice] = useState(false);
+  const [refining, setRefining] = useState(false);
+  const [refinementApplied, setRefinementApplied] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -63,7 +67,10 @@ function SkillsTranslator({ selectedRoles }) {
       const translation = generateProfessionalTranslation(selectedSkillsData, targetRole, careers);
       setResumeSummary(translation.summary);
       setBulletPoints(translation.bullets);
+      setListingReferences(translation.listingReferences || []);
       setShowTranslation(true);
+      setShowTranslationNotice(true);
+      setRefinementApplied(false);
 
       trackEvent('generate_translation', {
         selected_roles_count: selectedRoles.length,
@@ -80,55 +87,98 @@ function SkillsTranslator({ selectedRoles }) {
   };
 
   const generateProfessionalTranslation = (skillsData, role, careersData) => {
-    // Generate a professional summary
-    const allCivilianSkills = [];
+    const roleTokens = role
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter(Boolean);
+
     const allKeySkills = [];
     
     skillsData.forEach(skill => {
-      allCivilianSkills.push(...(skill.civilian_translations || []));
       allKeySkills.push(...(skill.key_skills || []));
     });
 
-    const uniqueSkills = [...new Set(allKeySkills)];
+    const uniqueSkills = [...new Set(allKeySkills.map((s) => s.toLowerCase()))];
+
+    const rankedListings = (careersData || [])
+      .map((career) => {
+        const title = (career.title || '').toLowerCase();
+        const description = (career.description || '').toLowerCase();
+        const titleTokenMatches = roleTokens.filter((token) => title.includes(token)).length;
+        const descriptionTokenMatches = roleTokens.filter((token) => description.includes(token)).length;
+        const requiredSkills = (career.required_skills || []).map((s) => s.toLowerCase());
+        const skillOverlap = requiredSkills.filter((req) =>
+          uniqueSkills.some((skill) => req.includes(skill) || skill.includes(req))
+        ).length;
+
+        return {
+          ...career,
+          rankScore: titleTokenMatches * 4 + descriptionTokenMatches + skillOverlap * 3
+        };
+      })
+      .filter((career) => career.rankScore > 0)
+      .sort((a, b) => b.rankScore - a.rankScore)
+      .slice(0, 3);
+
+    const fallbackListing = (careersData || []).slice(0, 2);
+    const selectedListings = rankedListings.length > 0 ? rankedListings : fallbackListing;
+    const listingReferences = selectedListings.map((listing) => listing.title);
+
+    const requiredSkillsPool = [...new Set(
+      selectedListings.flatMap((listing) => listing.required_skills || []).map((s) => s.toLowerCase())
+    )];
+
+    const industriesPool = [...new Set(
+      selectedListings.flatMap((listing) => listing.industries || [])
+    )];
+
+    const alignedSkills = uniqueSkills.filter((skill) =>
+      requiredSkillsPool.some((req) => req.includes(skill) || skill.includes(req))
+    );
+
+    const uniqueMatchedSkills = [...new Set(alignedSkills)].slice(0, 6);
     const skillsText = uniqueSkills.length > 0
       ? uniqueSkills.slice(0, 5).join(', ')
       : 'operations, leadership, problem solving';
 
-    const normalizedRole = role.trim().toLowerCase();
-    const matchedCareer = (careersData || []).find((career) => {
-      const title = (career.title || '').toLowerCase();
-      return title === normalizedRole || title.includes(normalizedRole) || normalizedRole.includes(title);
-    });
-
-    const targetSkills = matchedCareer?.required_skills || [];
-    const targetIndustries = matchedCareer?.industries || [];
-    const targetSkillsText = targetSkills.length > 0
-      ? targetSkills.slice(0, 4).join(', ')
+    const targetSkillsText = requiredSkillsPool.length > 0
+      ? requiredSkillsPool.slice(0, 5).join(', ')
       : 'cross-functional leadership, communication, execution';
-    const industryText = targetIndustries.length > 0
-      ? targetIndustries.slice(0, 2).join(' and ')
+    const industryText = industriesPool.length > 0
+      ? industriesPool.slice(0, 2).join(' and ')
       : 'this industry';
 
-    const alignedSkills = uniqueSkills.filter((skill) =>
-      targetSkills.some((req) => req.toLowerCase().includes(skill.toLowerCase()) || skill.toLowerCase().includes(req.toLowerCase()))
-    );
-    const alignedSkillsText = alignedSkills.length > 0
-      ? alignedSkills.slice(0, 3).join(', ')
+    const alignedSkillsText = uniqueMatchedSkills.length > 0
+      ? uniqueMatchedSkills.slice(0, 4).join(', ')
       : targetSkillsText;
 
-    const summary = `Results-driven professional with extensive background in ${skillsText} and proven expertise aligned to ${role} requirements including ${targetSkillsText}. Prepared to deliver measurable impact in ${industryText} by applying military-developed leadership, execution discipline, and operational excellence.`;
+    const listingReferenceText = listingReferences.length > 0
+      ? listingReferences.join(', ')
+      : 'similar civilian job listings';
 
-    // Generate bullet points
-    const bullets = [
-      `Demonstrated expertise as ${skillsData.map(s => s.military_term).join(' and ')}, with direct alignment to ${role} competencies in ${alignedSkillsText}`,
-      `Delivered mission-critical outcomes under pressure while maintaining standards directly relevant to ${targetSkillsText}`,
-      `Led and coordinated teams across complex operations, translating to strong stakeholder communication and cross-functional execution in ${industryText}`,
-      `Applied disciplined process control, risk management, and compliance practices to support reliable and repeatable performance expectations`,
-      `Rapidly learned and implemented new tools, systems, and procedures to meet changing operational and business requirements`,
-      `Positioned military experience in civilian terms that match hiring criteria for ${role}, emphasizing impact, ownership, and results`
+    const summary = `Results-driven professional with extensive background in ${skillsText} and proven expertise aligned to ${role} requirements seen across listings for ${listingReferenceText}. Prepared to deliver measurable impact in ${industryText} through role-relevant strengths in ${targetSkillsText}.`;
+
+    const roleExperience = skillsData.map((s) => s.military_term).join(', ');
+    const candidateBullets = [
+      `Applied ${roleExperience} experience to core business priorities including ${alignedSkillsText}.`,
+      `Delivered reliable outcomes in high-pressure environments while maintaining standards expected for ${targetSkillsText}.`,
+      `Coordinated teams and resources across complex operations to improve execution, communication, and delivery outcomes.`,
+      `Implemented disciplined risk controls and process improvements that supported consistent results across ${industryText}.`,
+      `Quickly adopted new systems, tools, and workflows to meet changing business requirements in ${industryText}.`,
+      `Prioritized safety, compliance, and execution discipline to strengthen performance across ${industryText}.`
     ];
 
-    return { summary, bullets };
+    const seen = new Set();
+    const bullets = candidateBullets.filter((bullet) => {
+      const normalized = bullet.toLowerCase();
+      if (seen.has(normalized)) {
+        return false;
+      }
+      seen.add(normalized);
+      return true;
+    });
+
+    return { summary, bullets, listingReferences };
   };
 
   const veteranResources = [
@@ -176,6 +226,35 @@ function SkillsTranslator({ selectedRoles }) {
     }
   };
 
+  const handleRefineWithAI = async () => {
+    if (!showTranslation) {
+      return;
+    }
+
+    setRefining(true);
+    try {
+      const response = await axios.post(`${API_URL}/refine-translation`, {
+        target_role: targetRole,
+        summary: resumeSummary,
+        bullets: bulletPoints
+      });
+
+      setResumeSummary(response.data.summary || resumeSummary);
+      setBulletPoints(response.data.bullets || bulletPoints);
+      setRefinementApplied(true);
+
+      trackEvent('refine_translation_ai', {
+        target_role: targetRole.trim().slice(0, 100),
+        bullet_count: (response.data.bullets || []).length
+      });
+    } catch (error) {
+      console.error('Error refining translation:', error);
+      alert('Unable to refine translation right now. Please try again.');
+    } finally {
+      setRefining(false);
+    }
+  };
+
   return (
     <div className="skills-translator">
       <div className="translator-header">
@@ -191,6 +270,12 @@ function SkillsTranslator({ selectedRoles }) {
       </div>
 
       <div className="translator-content">
+        {showTranslationNotice && (
+          <div className="translation-complete-notice" role="status" aria-live="polite">
+            Translation complete. Your civilian-ready resume summary and bullet points are below.
+          </div>
+        )}
+
         <div className="translator-form">
           <div className="form-section">
             <h3>Step 1: Your Military Roles</h3>
@@ -235,6 +320,12 @@ function SkillsTranslator({ selectedRoles }) {
 
         {showTranslation && (
           <div className="translation-results">
+            {listingReferences.length > 0 && (
+              <div className="listing-reference-box">
+                <strong>Job listings referenced:</strong> {listingReferences.join(', ')}
+              </div>
+            )}
+
             <div className="results-section">
               <h3>Professional Summary (For Your Resume)</h3>
               <div className="summary-box">
@@ -260,6 +351,20 @@ function SkillsTranslator({ selectedRoles }) {
               >
                 Copy All Bullets
               </button>
+            </div>
+
+            <div className="translation-actions">
+              <button
+                type="button"
+                className="refine-btn"
+                onClick={handleRefineWithAI}
+                disabled={refining}
+              >
+                {refining ? 'Refining with AI...' : 'Improve Translation with AI Refinement'}
+              </button>
+              {refinementApplied && (
+                <p className="refined-status">AI refinement applied. Your resume language has been strengthened.</p>
+              )}
             </div>
 
             <div className="results-section tips-section">

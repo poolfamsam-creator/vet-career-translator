@@ -21,6 +21,7 @@ function App() {
   const [availableInterests, setAvailableInterests] = useState([]);
   const [activeTab, setActiveTab] = useState('skills');
   const [currentPage, setCurrentPage] = useState('matcher');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(() => window.innerWidth > 768);
 
   // Load available interests on mount
   useEffect(() => {
@@ -108,14 +109,33 @@ function App() {
 
   return (
     <div className="app-layout">
-      <Sidebar activeTab={currentPage} onTabChange={setCurrentPage} />
+      <Sidebar
+        activeTab={currentPage}
+        onTabChange={(tab) => {
+          setCurrentPage(tab);
+          if (window.innerWidth <= 768) {
+            setIsSidebarOpen(false);
+          }
+        }}
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+      />
       
-      <div className="app-main">
+      <div className={`app-main ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
+        <button
+          type="button"
+          className="mobile-menu-btn"
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          {isSidebarOpen ? '✕ Close' : '☰ Menu'}
+        </button>
+
         {currentPage === 'matcher' ? (
           <div className="app">
             <header className="app-header">
               <h1>Military Career Translator</h1>
-              <p>Transform your military experience into civilian career opportunities</p>
+              <p>Translate military experience into civilian resume language in minutes.</p>
             </header>
 
             <div className="app-container">
@@ -208,6 +228,10 @@ function App() {
                   </button>
                 </div>
               )}
+            </div>
+
+            <div className="homepage-trust-footer">
+              Built by a US Marine veteran to make civilian transition easier.
             </div>
           </div>
         ) : (

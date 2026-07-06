@@ -125,3 +125,34 @@
   padding: 40px;
   color: #999;
 }
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .skill-card {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .skill-checkbox {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+
+  .skill-title {
+    font-size: 0.93em;
+  }
+
+  .skill-translations {
+    font-size: 0.82em;
+  }
+
+  .expand-btn {
+    font-size: 1em;
+    padding: 2px 6px;
+  }
+}

@@ -6,14 +6,37 @@
 
 .app-main {
   flex: 1;
-  margin-left: 250px;
   transition: margin-left 0.3s ease;
+}
+
+.app-main.sidebar-open {
+  margin-left: 250px;
+}
+
+.app-main.sidebar-closed {
+  margin-left: 0;
+}
+
+.mobile-menu-btn {
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1050;
+  border: none;
+  background: #1e40af;
+  color: white;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .app {
   min-height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
+  padding-top: 52px;
 }
 
 .app-header {
@@ -31,6 +54,23 @@
 .app-header p {
   font-size: 1.1em;
   opacity: 0.9;
+}
+
+.trust-line {
+  margin-top: 10px;
+  font-size: 0.95em;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.homepage-trust-footer {
+  margin: 14px auto 0;
+  max-width: 1200px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.95em;
+  font-weight: 600;
+  opacity: 0.96;
 }
 
 .app-container {
@@ -157,37 +197,83 @@
 
 @media (max-width: 768px) {
   .app-main {
-    margin-left: 80px;
+    margin-left: 0;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .app {
+    padding: 10px;
+    padding-top: 52px;
+  }
+
+  .app-header {
+    margin-bottom: 16px;
+    padding: 8px;
   }
 
   .app-header h1 {
-    font-size: 1.8em;
+    font-size: 1.35em;
+    margin-bottom: 6px;
   }
 
   .app-header p {
-    font-size: 0.95em;
+    font-size: 0.85em;
+    margin: 0;
+  }
+
+  .trust-line {
+    margin-top: 6px;
+    font-size: 0.8em;
+  }
+
+  .homepage-trust-footer {
+    font-size: 0.82em;
+    padding: 0 8px;
+    margin-top: 10px;
   }
 
   .app-container {
     margin: 0;
-    border-radius: 0;
+    border-radius: 10px;
+  }
+
+  .tabs {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .tab-button {
+    padding: 12px 8px;
+    font-size: 0.88em;
   }
 
   .skills-panel,
   .results-panel {
-    padding: 20px;
+    padding: 14px;
+  }
+
+  .panel-section {
+    margin-bottom: 20px;
   }
 
   .panel-section h2 {
-    font-size: 1.2em;
-    margin-bottom: 15px;
+    font-size: 1.05em;
+    margin-bottom: 10px;
   }
 
   .action-buttons {
     flex-direction: column;
+    margin-top: 16px;
+    gap: 8px;
   }
 
   .btn {
     width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95em;
   }
 }

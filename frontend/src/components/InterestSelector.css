@@ -39,3 +39,21 @@
   font-size: 0.95em;
   color: #333;
 }
+
+@media (max-width: 768px) {
+  .interests-grid {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .interest-button {
+    padding: 7px 12px;
+    font-size: 0.82em;
+    border-radius: 16px;
+  }
+
+  .selected-interests {
+    padding: 10px;
+    font-size: 0.85em;
+  }
+}
